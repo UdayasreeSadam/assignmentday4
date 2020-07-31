@@ -1,0 +1,111 @@
+#arithmetic operators 
+
+#!/bin/sh
+let "a=5+2"
+echo "a=$a"
+output: 7
+
+ let "a=5-2" 
+echo "a=$a" 
+output: 3
+
+let "a=2*2" 
+echo "a=$a"
+output: 4
+
+let "a=2/2" 
+echo "a=$a" 
+output: 1 
+
+#pre increment operator
+
+i=40 
+echo "preincrement:" $((++i +20)) 
+output: 
+preincrement: 61 
+
+ #post increment operator 
+
+y=60 echo "postincrement:" $((y++ +10)) 
+echo $(($y)) 
+output: postincrement: 70 
+61
+ 
+#pre decrement operator 
+x=39 
+echo "predecrement:" $((--x)) 
+output: predecrement: 38
+
+#post decrement operator 
+x=39 
+echo "postdecrement:" $((x--)) 
+echo $(($x)) 
+output: postdecrement:39 38
+
+#Relation operators
+n=50
+if[ $n -eq 80 ]
+then
+	echo"the number is 80"
+else
+	echo "the number is not 80"
+fi
+
+output:the number is not 80
+
+n=50
+if[ $n -ne 80 ]
+then
+	echo"the number is 80"
+else
+	echo "the number is not 80"
+fi
+
+output:the number is 80
+
+#integer operators
+c=50
+if [[ $c < 50 ]] 
+then 
+	echo "yes" 
+else
+	echo "not "
+fi 
+output: not
+
+c=50
+if [[ $c <= 50 ]] 
+then 
+	echo "yes" 
+else
+	echo "not "
+fi 
+output: yes
+
+c=50
+if [[ $c >= 100 ]] 
+then 
+	echo "yes" 
+else
+	echo "not "
+fi 
+output: not
+
+c=50
+if [[ $c >= 20]] 
+then 
+	echo "yes" 
+else
+	echo "not "
+fi 
+output: yes
+ 
+#string operators
+s="cat" 
+if [ $s="cat" ] 
+then 
+	echo "true" 
+else 	
+	echo "false"
+fi 
+output: true
